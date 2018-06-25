@@ -1,7 +1,7 @@
 module Api::V1
     class EventsController < ApplicationController
         def index
-            @events = Event.order("start DESC")
+            @events = Event.order(start: :desc)
             render json: @events
         end
 
@@ -13,7 +13,7 @@ module Api::V1
         private
 
         def event_params
-            params.require(:event).permit(:description, :start, :end, :dayId)
+            params.require(:event).permit(:description, :start, :end, :day_id)
         end
     end
 end

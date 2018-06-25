@@ -4,7 +4,7 @@ class CreateEvents < ActiveRecord::Migration[5.1]
       t.string :description
       t.timestamp :start
       t.timestamp :end
-      t.integer :dayId
+      t.integer :day_id
 
       t.timestamps
     end
