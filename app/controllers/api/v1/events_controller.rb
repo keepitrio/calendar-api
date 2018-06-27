@@ -1,7 +1,7 @@
 module Api::V1
     class EventsController < ApplicationController
         def index
-            @events = Event.order(start: :desc)
+            @events = Event.order(start: :asce)
             render json: @events
         end
 
